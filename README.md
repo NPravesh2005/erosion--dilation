@@ -1,3 +1,8 @@
+# EROSION -- DILATION
+
+### DEVELOPED BY : PRAVESH N
+### REG NO : 212223230154
+
 ## Aim
 To implement Erosion and Dilation using Python and OpenCV.
 ## Software Required
@@ -24,18 +29,20 @@ Apply dilation to the original image using the same structuring element to incre
 
  
 ## Program:
-### DEVELOPED BY : PRAVESH N
-### REG NO : 212223230154
 
 # Import the necessary packages
-```
+```py
+# DEVELOPED BY : PRAVESH N
+# REG NO : 212223230154
+# EXPT NO : 9
+
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 ```
 
 # Create the Text using cv2.putText
-```
+```py
 img = np.zeros((100, 600, 3), dtype='uint8')  # Black background (RGB: 0, 0, 0)
 font = cv2.FONT_HERSHEY_COMPLEX
 text_color = (255, 255, 255)  # White text (RGB: 255, 255, 255)
@@ -48,14 +55,14 @@ plt.show()
 
 # Create the structuring element
 
-```
+```py
 kernel = np.ones((5,5),np.uint8)
 kernel1 = cv2.getStructuringElement(cv2.MORPH_CROSS,(5,5))
 cv2.erode(img,kernel)
 ```
 
 # Erode the image
-```
+```py
 img_erode = cv2.erode(img,kernel1)
 plt.imshow(img_erode)
 plt.axis('off')
@@ -65,7 +72,7 @@ plt.axis('off')
 
 # Dilate the image
 
-```
+```py
 img_dilate = cv2.dilate(img,kernel1)
 plt.imshow(img_dilate)
 plt.axis('off')
